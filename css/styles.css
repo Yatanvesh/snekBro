@@ -1,0 +1,97 @@
+body {
+    background: linear-gradient(to right, #d53369, #cbad6d);
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.title {
+    font-size: 3rem;
+    color: #e14594;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.game-area {
+    height: 400px;
+    width: 400px;
+    border: 2px solid rgba(200, 0, 50, 0.5);
+    box-shadow: #cbad6d;
+    position: relative;
+    background: rgba(200, 0, 0, 0.05);
+    transition: 0.5s ease-in;
+    margin: auto;
+}
+
+.game-area:focus {
+    background: rgba(200, 0, 50, 0.3);
+    outline: 0;
+    transition: 0.5s ease-in;
+}
+
+.game-area-restart {
+    transition: 0.5s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.player {
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    display: inline-block;
+    position: absolute;
+    background: aqua;
+    border-radius: 0.2rem;
+}
+
+.food {
+    height: 20px;
+    width: 20px;
+    border: 2px solid green;
+    display: inline-block;
+    position: absolute;
+    border-radius: 5rem;
+    animation: 0.3s infinite alternate slidein;
+}
+
+@keyframes slidein {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.speed {
+    font-size: 2rem;
+    color: #8ed6ff;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.btn {
+    font-size: 2rem;
+    width: 2rem;
+    display: inline-block;
+    padding: 0 1rem 0 1rem;
+    margin: 0 2rem;
+    border: 2px solid black;
+    background: rgba(200, 0, 50, 0.5);
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:active {
+    transform: scale(1.2);
+    background: rgba(220, 0, 50, 1);
+    outline: 0;
+}
